@@ -1,44 +1,41 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# techpit-react-vote
 
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+0. はじめに
+    1. コース概要
+    1. Reactとは
+    1. TypeScriptとは/TypeScriptを使用するメリット
+    1. アンケートアプリの設計
+    1. Node.jsのインストール (Mac)
+    1. Node.jsのインストール (Windows)
+    1. Visual Studio Code のインストール (Mac)
+    1. Visual Studio Code のインストール (Windows)
+    1. VSCode拡張機能のインストール
+1. Reactを始める前に
+    1. モダンな JavaScript の機能 (0): 動作環境の準備
+    1. モダンな JavaScript の機能 (1): 変数の宣言
+    1. モダンな JavaScript の機能 (2): アロー関数
+    1. モダンな JavaScript の機能 (3): スプレッド構文
+    1. モダンな JavaScript の機能 (4): デフォルト引数と残余引数
+    1. モダンな JavaScript の機能 (5): 分割代入
+    1. イミュータブル (不変) とシャローコピー・ディープコピー
+    1. TypeScript の機能 (0): 動作環境の準備
+    1. TypeScript の機能 (1): 型推論と型指定 / 型システム
+    1. TypeScript の機能 (2): interface について
+    1. TypeScript の機能 (3): リテラル型、列挙型、ジェネリックス
+2. フロントエンドの実装 (0): Reactプロジェクトの作成
+    1. create-react-app コマンドによるプロジェクト生成
+    2. ESLint/Prettier/EditorConfig の導入・設定 **←イマココ**
+    3. Reactの基本 (0): コンポーネントとは
+    4. Reactの基本 (1): コンポーネントと state/props
+    5. Reactの基本 (2): コンポーネントのテスト
+3. フロントエンドの実装 (1): デザインモックとコンポーネント構成
+4. フロントエンドの実装 (2): コンポーネントの静的なバージョンを作成する
+5. フロントエンドの実装 (3): 静的なデータをstateに置き換える・認証機能
+6. フロントエンドの実装 (4): 静的なデータをstateに置き換える・アンケート機能
+7. フロントエンドの実装 (5): テストの実装
+8. バックエンドの実装 (0): WebAPIの設計
+9. バックエンドの実装 (1): プロジェクトの作成
+10. バックエンドの実装 (2): APIの実装
+11. バックエンドの実装 (3): テストの実装
+12. フロントエンドの実装 (6): ReactとWebAPIを連携させる
+13. フロントエンドの実装 (7): テストの修正
