@@ -43,6 +43,8 @@ module.exports = {
                 mjs: 'never',
             },
         ],
+        // PropTypesの指定を不要にする
+        'react/prop-types': 'off',
     },
     settings: {
         // import時に省略される拡張子の設定:  .js, .jsx, .ts, .tsx
