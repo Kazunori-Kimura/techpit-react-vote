@@ -1,21 +1,17 @@
-import React, { useState, ChangeEvent } from 'react';
+import React, { useState } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import Message from './components/Message';
+import NameInput from './components/NameInput';
 
 const App: React.FC = () => {
     const [name, setName] = useState('');
-
-    const handleChangeName = (event: ChangeEvent<HTMLInputElement>) => {
-        const { value } = event.currentTarget;
-        setName(value);
-    };
 
     return (
         <div className="App">
             <header className="App-header">
                 <img src={logo} className="App-logo" alt="logo" />
-                <input type="text" value={name} onChange={handleChangeName} />
+                <NameInput name={name} onChange={setName} />
                 <Message name={name} />
                 <a
                     className="App-link"
