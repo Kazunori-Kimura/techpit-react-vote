@@ -11,7 +11,14 @@ const NameInput: React.FC<NameInputProps> = ({ name, onChange }) => {
         onChange(value);
     };
 
-    return <input type="text" value={name} onChange={handleChangeName} />;
+    return (
+        <input
+            type="text"
+            placeholder="名前を入力してください"
+            value={name}
+            onChange={handleChangeName}
+        />
+    );
 };
 
 export default NameInput;
