@@ -1,18 +1,13 @@
-import React, { useState } from 'react';
-import logo from './logo.svg';
+import React from 'react';
+import Button from './components/common/Button';
+import TextField from './components/common/TextField';
+
 import './App.css';
-import Message from './components/Message';
-import NameInput from './components/NameInput';
 
 const App: React.FC = () => {
-    const [name, setName] = useState('');
-
     return (
         <div className="App">
             <header className="App-header">
-                <img src={logo} className="App-logo" alt="logo" />
-                <NameInput name={name} onChange={setName} />
-                <Message name={name} />
                 <a
                     className="App-link"
                     href="https://reactjs.org"
@@ -21,6 +16,12 @@ const App: React.FC = () => {
                 >
                     Learn React
                 </a>
+
+                <Button variant="delete">削除</Button>
+                <Button variant="entry">登録</Button>
+                <Button variant="normal">通常</Button>
+
+                <TextField />
             </header>
         </div>
     );

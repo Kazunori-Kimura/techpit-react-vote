@@ -45,6 +45,8 @@ module.exports = {
         ],
         // PropTypesの指定を不要にする
         'react/prop-types': 'off',
+        // jsx でのスプレッド構文を許可する
+        'react/jsx-props-no-spreading': 'off',
     },
     settings: {
         // import時に省略される拡張子の設定:  .js, .jsx, .ts, .tsx
