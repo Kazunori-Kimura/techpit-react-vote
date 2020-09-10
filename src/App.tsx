@@ -3,6 +3,7 @@ import Button from './components/common/Button';
 import TextField from './components/common/TextField';
 import SignIn from './components/authentication/SignIn';
 import SignOut from './components/authentication/SignOut';
+import SignUp from './components/authentication/SignUp';
 
 import './App.css';
 
@@ -37,6 +38,12 @@ const App: React.FC = () => {
                 onSignOut={() => {
                     // eslint-disable-next-line no-console
                     console.log('sign out.');
+                }}
+            />
+            <SignUp
+                onSignUp={(params) => {
+                    // eslint-disable-next-line no-console
+                    console.log(params);
                 }}
             />
         </div>
