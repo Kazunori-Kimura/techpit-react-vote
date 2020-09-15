@@ -7,7 +7,7 @@ interface QuestionLimitEditorProps extends Omit<InputHTMLAttributes<HTMLInputEle
     value?: string;
     min?: string;
 }
-// value={value && formatLocalDatetime(new Date(value))}
+
 const QuestionLimitEditor: React.FC<QuestionLimitEditorProps> = ({
     value,
     min,
