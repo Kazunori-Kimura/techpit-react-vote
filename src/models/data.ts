@@ -1,15 +1,15 @@
 import {
-    QuestionResponse,
-    QuestionRequest,
-    UserRequest,
-    UserResponse,
-    SignInRequest,
-    SignInResponse,
-    RefreshTokenResponse,
+    QuestionAttributes,
+    QuestionEntryAttributes,
+    UserEntryAttributes,
+    UserAttributes,
+    SignInAttributes,
+    SignInResponseAttributes,
+    RefreshTokenAttributes,
 } from './interfaces';
 
 // 質問データ
-export const questions: QuestionResponse[] = [
+export const questions: QuestionAttributes[] = [
     {
         id: 2,
         sentence: 'あなたの年齢を教えてください',
@@ -17,7 +17,7 @@ export const questions: QuestionResponse[] = [
         createdBy: 1,
         createdAt: '2020-08-31T00:00:00Z',
         updatedAt: '2020-08-31T00:00:00Z',
-        Choices: [
+        choices: [
             {
                 id: 1,
                 content: '10才未満',
@@ -49,7 +49,7 @@ export const questions: QuestionResponse[] = [
                 updatedAt: '2020-08-31T00:00:00Z',
             },
         ],
-        Votes: [
+        votes: [
             { id: 1, questionId: 2, choiceId: 1, votedBy: 2 },
             { id: 2, questionId: 2, choiceId: 1, votedBy: 3 },
             { id: 3, questionId: 2, choiceId: 1, votedBy: 4 },
@@ -64,7 +64,7 @@ export const questions: QuestionResponse[] = [
         createdBy: 2,
         createdAt: '2020-08-31T00:00:00Z',
         updatedAt: '2020-08-31T00:00:00Z',
-        Choices: [
+        choices: [
             {
                 id: 1,
                 content: 'きのこ',
@@ -78,7 +78,7 @@ export const questions: QuestionResponse[] = [
                 updatedAt: '2020-08-31T00:00:00Z',
             },
         ],
-        Votes: [
+        votes: [
             { id: 1, questionId: 1, choiceId: 2, votedBy: 1 },
             { id: 2, questionId: 1, choiceId: 2, votedBy: 2 },
             { id: 3, questionId: 1, choiceId: 2, votedBy: 3 },
@@ -99,21 +99,21 @@ export const questions: QuestionResponse[] = [
 ];
 
 // 質問登録データ
-export const questionRequest: QuestionRequest = {
+export const questionRequest: QuestionEntryAttributes = {
     sentence: '朝食は何派？',
     limit: '2099-11-01T00:00:00.000Z',
     Choices: [{ content: 'パン派' }, { content: '米派' }, { content: 'たべない' }],
 };
 
 // 質問登録成功
-export const questionResponse: QuestionResponse = {
+export const questionResponse: QuestionAttributes = {
     id: 3,
     sentence: '朝食は何派？',
     limit: '2099-11-01T00:00:00.000Z',
     createdBy: 1,
     createdAt: '2020-08-31T00:00:00Z',
     updatedAt: '2020-08-31T00:00:00Z',
-    Choices: [
+    choices: [
         {
             id: 1,
             content: 'パン派',
@@ -136,32 +136,32 @@ export const questionResponse: QuestionResponse = {
 };
 
 // ユーザー登録データ
-export const userEntry: UserRequest = {
+export const userEntry: UserEntryAttributes = {
     email: 'kimura-kazunori@example.com',
     name: '木村 憲規',
     password: 'secret',
 };
 
 // ユーザーデータ
-export const user: UserResponse = {
+export const user: UserAttributes = {
     id: 1,
     email: 'kimura-kazunori@example.com',
     name: '木村 憲規',
 };
 
 // ログインパラメータ
-export const signInParams: SignInRequest = {
+export const signInParams: SignInAttributes = {
     email: 'kimura-kazunori@example.com',
     password: 'secret',
 };
 
 // ログイン成功
-export const signInResult: SignInResponse = {
-    ...userEntry,
+export const signInResult: SignInResponseAttributes = {
+    ...user,
     token: 'abc123',
 };
 
 // token更新
-export const token: RefreshTokenResponse = {
+export const token: RefreshTokenAttributes = {
     token: 'abc123',
 };

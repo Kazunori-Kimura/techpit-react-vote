@@ -1,14 +1,14 @@
 import React, { FormEvent } from 'react';
 import TextField from '../common/TextField';
 import Button from '../common/Button';
-import { SignInRequest } from '../../models/interfaces';
+import { SignInAttributes } from '../../models/interfaces';
 
 import './SignIn.css';
 // ダミーデータ
 import { signInParams } from '../../models/data';
 
 interface SignInProps {
-    onSignIn: (params: SignInRequest) => void;
+    onSignIn: (params: SignInAttributes) => void;
 }
 
 const SignIn: React.FC<SignInProps> = ({ onSignIn }) => {

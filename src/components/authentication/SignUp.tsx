@@ -1,13 +1,13 @@
 import React, { FormEvent } from 'react';
 import TextField from '../common/TextField';
 import Button from '../common/Button';
-import { UserRequest } from '../../models/interfaces';
+import { UserEntryAttributes } from '../../models/interfaces';
 
 import './SignUp.css';
 import { userEntry } from '../../models/data';
 
 interface SignUpProps {
-    onSignUp: (params: UserRequest) => void;
+    onSignUp: (params: UserEntryAttributes) => void;
 }
 
 const SignUp: React.FC<SignUpProps> = ({ onSignUp }) => {

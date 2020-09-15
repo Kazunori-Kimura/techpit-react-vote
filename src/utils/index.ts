@@ -23,3 +23,12 @@ export const formatLocalDatetime = (date: Date): string => {
 
     return `${y}-${padLeft(m)}-${padLeft(d)}T${padLeft(h)}:${padLeft(mi)}`;
 };
+
+/**
+ * object をディープコピーする (メソッドは不可)
+ * @param obj コピーする object
+ */
+export const clone = <T>(obj: T): T => {
+    const obj2 = JSON.parse(JSON.stringify(obj)) as T;
+    return obj2;
+};

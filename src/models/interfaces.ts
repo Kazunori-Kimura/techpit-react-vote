@@ -1,5 +1,5 @@
 // 投票データ
-export interface VoteResponse {
+export interface VoteAttributes {
     id: number;
     questionId: number;
     choiceId: number;
@@ -7,58 +7,58 @@ export interface VoteResponse {
 }
 
 // 質問登録データ
-export interface ChoiceRequest {
+export interface ChoiceEntryAttributes {
     content: string;
 }
 
 // 選択肢データ
-export interface ChoiceResponse extends ChoiceRequest {
+export interface ChoiceAttributes extends ChoiceEntryAttributes {
     id: number;
     createdAt: string;
     updatedAt: string;
 }
 
 // 質問登録データ
-export interface QuestionRequest {
+export interface QuestionEntryAttributes {
     sentence: string;
     limit: string;
-    Choices: ChoiceRequest[];
+    Choices: ChoiceEntryAttributes[];
 }
 
 // 質問データ
-export interface QuestionResponse extends Omit<QuestionRequest, 'Choices'> {
+export interface QuestionAttributes extends Omit<QuestionEntryAttributes, 'Choices'> {
     id: number;
     createdBy: number;
     createdAt: string;
     updatedAt: string;
-    Choices: ChoiceResponse[];
-    Votes?: VoteResponse[];
+    choices: ChoiceAttributes[];
+    votes?: VoteAttributes[];
 }
 
 // ユーザー登録データ
-export interface UserRequest {
+export interface UserEntryAttributes {
     email: string;
     name: string;
     password: string;
 }
 
 // ユーザーデータ
-export interface UserResponse extends Omit<UserRequest, 'password'> {
+export interface UserAttributes extends Omit<UserEntryAttributes, 'password'> {
     id: number;
 }
 
 // ログインパラメータ
-export interface SignInRequest {
+export interface SignInAttributes {
     email: string;
     password: string;
 }
 
 // ログイン成功
-export interface SignInResponse extends UserRequest {
+export interface SignInResponseAttributes extends UserAttributes {
     token: string;
 }
 
 // token更新
-export interface RefreshTokenResponse {
+export interface RefreshTokenAttributes {
     token: string;
 }

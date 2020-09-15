@@ -1,6 +1,6 @@
 import React from 'react';
-import QuestionSentenceEditor from './components/question/QuestionSentenceEditor';
-import QuestionLimitEditor from './components/question/QuestionLimitEditor';
+import ChoiceList from './components/question/ChoiceList';
+import { questions } from './models/data';
 
 import './App.css';
 
@@ -18,8 +18,7 @@ const App: React.FC = () => {
                 </a>
             </header>
 
-            <QuestionSentenceEditor />
-            <QuestionLimitEditor />
+            <ChoiceList choices={questions[0].choices} />
         </div>
     );
 };

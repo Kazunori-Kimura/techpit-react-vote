@@ -1,0 +1,13 @@
+.choice-item {
+    display: flex;
+    align-items: center;
+}
+
+.choice-item__text-field {
+    flex: 1;
+}
+
+.choice-item__delete-button {
+    margin-left: 0.3rem;
+    width: 4rem;
+}
