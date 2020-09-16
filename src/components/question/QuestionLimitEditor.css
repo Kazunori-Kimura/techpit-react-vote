@@ -1,9 +1,9 @@
-.question-limit-editor__label {
+.question-limit-editor {
     display: flex;
     align-items: center;
 }
 
-.question-limit-editor__labeltext {
+.question-limit-editor__label {
     padding-right: 0.3rem;
 }
 

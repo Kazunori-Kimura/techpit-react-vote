@@ -22,7 +22,7 @@ export interface ChoiceAttributes extends ChoiceEntryAttributes {
 export interface QuestionEntryAttributes {
     sentence: string;
     limit: string;
-    Choices: ChoiceEntryAttributes[];
+    choices: ChoiceEntryAttributes[];
 }
 
 // 質問データ

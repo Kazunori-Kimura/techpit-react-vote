@@ -47,6 +47,17 @@ module.exports = {
         'react/prop-types': 'off',
         // jsx でのスプレッド構文を許可する
         'react/jsx-props-no-spreading': 'off',
+        // label と input の関連づけ
+        'jsx-a11y/label-has-associated-control': [
+            'error',
+            {
+                labelComponents: [],
+                labelAttributes: [],
+                controlComponents: [],
+                assert: 'either',
+                depth: 25,
+            },
+        ],
     },
     settings: {
         // import時に省略される拡張子の設定:  .js, .jsx, .ts, .tsx

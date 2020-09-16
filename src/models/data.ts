@@ -102,7 +102,7 @@ export const questions: QuestionAttributes[] = [
 export const questionRequest: QuestionEntryAttributes = {
     sentence: '朝食は何派？',
     limit: '2099-11-01T00:00:00.000Z',
-    Choices: [{ content: 'パン派' }, { content: '米派' }, { content: 'たべない' }],
+    choices: [{ content: 'パン派' }, { content: '米派' }, { content: 'たべない' }],
 };
 
 // 質問登録成功

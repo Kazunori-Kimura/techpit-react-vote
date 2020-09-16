@@ -1,4 +1,5 @@
 import React, { ChangeEvent } from 'react';
+import classnames from 'classnames';
 import ChoiceItem from './ChoiceItem';
 import Button from '../common/Button';
 import { ChoiceEntryAttributes } from '../../models/interfaces';
@@ -6,15 +7,22 @@ import { ChoiceEntryAttributes } from '../../models/interfaces';
 import './ChoiceList.css';
 
 interface ChoiceListProps {
+    className?: string;
     choices: ChoiceEntryAttributes[];
     onAdd?: VoidFunction;
     onDelete?: (index: number) => void;
     onChange?: (event: ChangeEvent<HTMLInputElement>, index: number) => void;
 }
 
-const ChoiceList: React.FC<ChoiceListProps> = ({ choices, onAdd, onDelete, onChange }) => {
+const ChoiceList: React.FC<ChoiceListProps> = ({
+    className,
+    choices,
+    onAdd,
+    onDelete,
+    onChange,
+}) => {
     return (
-        <div className="choice-list">
+        <div className={classnames('choice-list', className)}>
             {choices.map((choice, index) => (
                 <ChoiceItem
                     key={`choice-item-${choice.content}`}

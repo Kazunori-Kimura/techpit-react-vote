@@ -1,6 +1,5 @@
 import React from 'react';
-import ChoiceList from './components/question/ChoiceList';
-import { questions } from './models/data';
+import QuestionEntry from './components/question/QuestionEntry';
 
 import './App.css';
 
@@ -18,7 +17,7 @@ const App: React.FC = () => {
                 </a>
             </header>
 
-            <ChoiceList choices={questions[0].choices} />
+            <QuestionEntry />
         </div>
     );
 };
