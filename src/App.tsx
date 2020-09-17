@@ -1,7 +1,10 @@
 import React from 'react';
-import QuestionEntry from './components/question/QuestionEntry';
+import QuestionSentence from './components/question/QuestionSentence';
+import VoteCount from './components/question/VoteCount';
+import QuestionLimit from './components/question/QuestionLimit';
 
 import './App.css';
+import { questions } from './models/data';
 
 const App: React.FC = () => {
     return (
@@ -16,8 +19,9 @@ const App: React.FC = () => {
                     Learn React
                 </a>
             </header>
-
-            <QuestionEntry />
+            <QuestionSentence sentence={questions[0].sentence} />
+            <VoteCount count={questions[0].votes?.length ?? 0} />
+            <QuestionLimit limit={questions[0].limit} />
         </div>
     );
 };
