@@ -1,0 +1,12 @@
+.question-list {
+    max-width: 640px;
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.question-list__question {
+    margin-bottom: 18px;
+}

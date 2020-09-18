@@ -1,5 +1,5 @@
 import React from 'react';
-import VoteResult from './components/question/VoteResult';
+import QuestionList from './components/question/QuestionList';
 
 import './App.css';
 import { questions } from './models/data';
@@ -17,14 +17,8 @@ const App: React.FC = () => {
                     Learn React
                 </a>
             </header>
-            {questions[1].choices.map((choice) => (
-                <VoteResult
-                    key={`vote-result=${choice.id}`}
-                    choice={choice}
-                    votes={questions[1].votes}
-                    loginUserId={1}
-                />
-            ))}
+
+            <QuestionList questions={questions} loginUserId={1} />
         </div>
     );
 };
