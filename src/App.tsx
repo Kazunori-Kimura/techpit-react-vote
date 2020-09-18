@@ -1,7 +1,5 @@
 import React from 'react';
-import QuestionSentence from './components/question/QuestionSentence';
-import VoteCount from './components/question/VoteCount';
-import QuestionLimit from './components/question/QuestionLimit';
+import VoteResult from './components/question/VoteResult';
 
 import './App.css';
 import { questions } from './models/data';
@@ -19,9 +17,14 @@ const App: React.FC = () => {
                     Learn React
                 </a>
             </header>
-            <QuestionSentence sentence={questions[0].sentence} />
-            <VoteCount count={questions[0].votes?.length ?? 0} />
-            <QuestionLimit limit={questions[0].limit} />
+            {questions[1].choices.map((choice) => (
+                <VoteResult
+                    key={`vote-result=${choice.id}`}
+                    choice={choice}
+                    votes={questions[1].votes}
+                    loginUserId={1}
+                />
+            ))}
         </div>
     );
 };
