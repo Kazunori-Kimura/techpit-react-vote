@@ -28,6 +28,9 @@ const Question: React.FC<QuestionProps> = ({
     onVote,
     onDelete,
 }) => {
+    /**
+     * 投票可能かどうか
+     */
     const isVotable = useMemo(() => {
         // 期限切れなら投票不可
         const now = new Date();
@@ -51,6 +54,7 @@ const Question: React.FC<QuestionProps> = ({
                 if (isVotable) {
                     return (
                         <Button
+                            key={`vote-button-${choice.id}`}
                             variant="normal"
                             className="question-item__vote-button"
                             onClick={() => {
@@ -65,6 +69,7 @@ const Question: React.FC<QuestionProps> = ({
                 }
                 return (
                     <VoteResult
+                        key={`vote-result-${choice.id}`}
                         className="question-item__vote-result"
                         choice={choice}
                         votes={votes}
