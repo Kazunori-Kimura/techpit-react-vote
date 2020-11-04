@@ -58,6 +58,14 @@ module.exports = {
                 depth: 25,
             },
         ],
+        // `import React from 'react';` で ESLint が no-use-before-define の警告を出す
+        // -> reactjs - 'React' was used before it was defined - Stack Overflow
+        //    https://stackoverflow.com/questions/63818415/react-was-used-before-it-was-defined
+        // create-react-app の 以下の issue のようだが、open のままなのでルールを無視するよう設定
+        // -> TypeScript - Incorrect *no-use-before-define* warning · Issue #7325 · facebook/create-react-app
+        //    https://github.com/facebook/create-react-app/issues/7325
+        'no-use-before-define': 'off',
+        '@typescript-eslint/no-use-before-define': ['error'],
     },
     settings: {
         // import時に省略される拡張子の設定:  .js, .jsx, .ts, .tsx
